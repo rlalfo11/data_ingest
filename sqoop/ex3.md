@@ -1,6 +1,8 @@
-﻿sqoop import --table accounts --connect jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num,first_name,last_name" --target-dir /loudacre/accounts/CA --fields-terminated-by "\t" --as-parquetfile -z --where " state='CA'"
+﻿3.
+1) 명령어
+sqoop import --table accounts --connect jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num,first_name,last_name" --target-dir /loudacre/accounts/CA --fields-terminated-by "\t" --as-parquetfile -z --where " state='CA'"
 
-=>
+2) 명령 수행 결과
 19/03/10 22:39:50 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.7.0
 19/03/10 22:39:50 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
 19/03/10 22:39:50 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
@@ -50,7 +52,7 @@ Note: Recompile with -Xlint:deprecation for details.
 		HDFS: Number of read operations=272
 		HDFS: Number of large read operations=0
 		HDFS: Number of write operations=40
-	Job Counters 
+	Job Counters
 		Launched map tasks=4
 		Other local map tasks=4
 		Total time spent by all maps in occupied slots (ms)=0
@@ -70,18 +72,18 @@ Note: Recompile with -Xlint:deprecation for details.
 		Physical memory (bytes) snapshot=638009344
 		Virtual memory (bytes) snapshot=8296513536
 		Total committed heap usage (bytes)=251920384
-	File Input Format Counters 
+	File Input Format Counters
 		Bytes Read=0
-	File Output Format Counters 
+	File Output Format Counters
 		Bytes Written=0
 19/03/10 22:40:43 INFO mapreduce.ImportJobBase: Transferred 946.4541 KB in 46.506 seconds (20.3512 KB/sec)
 19/03/10 22:40:43 INFO mapreduce.ImportJobBase: Retrieved 92416 records.
 
 
-조회
-parquet-tools head hdfs://localhost/loudacre/accounts/CA
+2. CA DATA 조회
+1) 명령어 parquet-tools head hdfs://localhost/loudacre/accounts/CA
 
-
+2) 명령 결과
 acct_num = 97323
 first_name = Myra
 last_name = Stiver

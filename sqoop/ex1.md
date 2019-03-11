@@ -1,9 +1,9 @@
-﻿1.
+1.Account Table 조회 명령 수행
 
-1) Account Table 조회
-
+1) 명령어
 sqoop eval --connect jdbc:mysql://localhost/loudacre --username training --password training --query "describe accounts"
 
+2) 명령 수행 결과
 19/03/10 22:12:03 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.7.0
 19/03/10 22:12:03 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
 19/03/10 22:12:03 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
@@ -26,9 +26,10 @@ sqoop eval --connect jdbc:mysql://localhost/loudacre --username training --passw
 
 1.From the accounts table, import only the primary key, along with the first name, last name to
 HDFS directory
+1) 명령어
 => sqoop import --table accounts --connect jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num,first_name,last_name" --target-dir /loudacre/accounts/user_info --fields-terminated-by "\t"
 
-=> 결과
+2) 명령 수행 결과
 19/03/10 22:19:55 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.7.0
 19/03/10 22:19:55 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
 19/03/10 22:19:55 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
