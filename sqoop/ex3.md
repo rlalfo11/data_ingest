@@ -76,3 +76,28 @@ Note: Recompile with -Xlint:deprecation for details.
 		Bytes Written=0
 19/03/10 22:40:43 INFO mapreduce.ImportJobBase: Transferred 946.4541 KB in 46.506 seconds (20.3512 KB/sec)
 19/03/10 22:40:43 INFO mapreduce.ImportJobBase: Retrieved 92416 records.
+
+
+조회
+parquet-tools head hdfs://localhost/loudacre/accounts/CA
+
+
+acct_num = 97323
+first_name = Myra
+last_name = Stiver
+
+acct_num = 97324
+first_name = Maria
+last_name = Choe
+
+acct_num = 97325
+first_name = Sarah
+last_name = Blumberg
+
+acct_num = 97326
+first_name = Pricilla
+last_name = Webb
+
+acct_num = 97327
+first_name = Patricia
+last_name = Dellinger
