@@ -1,3 +1,5 @@
+미디어플랫폼 성장전략 UNIT _ 07628 _ 김일해 수석
+
 1.Account Table 조회 명령 수행
 
 1) 명령어
@@ -24,8 +26,7 @@ sqoop eval --connect jdbc:mysql://localhost/loudacre --username training --passw
 | modified             | datetime             | NO  |     | (null)               |                      |
 ---------------------------------------------------------------------------------------------------------
 
-1.From the accounts table, import only the primary key, along with the first name, last name to
-HDFS directory
+1. accounts 테이블에서 acct_num,first_name,last_name 컬럼 값만 추출하여 /loudacre/accounts/user_info 경로에 저장 ( 필드 종료는 \t으로 )
 1) 명령어
 => sqoop import --table accounts --connect jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num,first_name,last_name" --target-dir /loudacre/accounts/user_info --fields-terminated-by "\t"
 
