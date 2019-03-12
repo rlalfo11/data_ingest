@@ -30,10 +30,7 @@ flume-ng agent --conf /etc/flume-ng/conf --conf-file ./spooldir.conf --name agen
 3) 명령 수행 결과
 [training@localhost Documents]$ telnet localhost 44444
 Trying 127.0.0.1...
-telnet: connect to address 127.0.0.1: Connection refused
-Trying ::1...
-telnet: connect to address ::1: Network is unreachable
-[training@localhost Documents]$ telnet localhost 44444
-Trying 127.0.0.1...
 Connected to localhost.
 Escape character is '^]'.
+hello there
+OK
